@@ -2,7 +2,7 @@
  Indirect font-lock
 ====================
 
-This is a small utility libraries for highlighting code embedded in comments or
+This is a small utility library for highlighting code embedded in comments or
 strings.  Examples could include doctests in Python, examples in JavaDoc, code
 snippets in LaTeX or reStructuredText, etc.  This library doesn't implement any
 of that, though: it just provides the plumbing to do so.
