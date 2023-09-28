@@ -67,7 +67,7 @@ further calls with the same MODE-FN reuse the same buffer."
                                        prop propval buffer))))
         (setq start end)))))
 
-(defun indirect-font-lock--fontify-as (mode-fn from to reset props)
+(defun indirect-font-lock-fontify-as (mode-fn from to &optional reset props)
   "Use buffer in MODE-FN to fontify FROM..TO.
 
 In other word, fontify FROM..TO would as if it had been alone in
@@ -92,7 +92,7 @@ mode MODE-FN.  If RESET is non-nil, erase existing fontification
 before applying new properties.  Copy fontification and extra
 PROPS."
   (save-match-data
-    (indirect-font-lock--fontify-as mode-fn (match-beginning group) (match-end group) reset props))
+    (indirect-font-lock-fontify-as mode-fn (match-beginning group) (match-end group) reset props))
   '(face nil))
 
 (provide 'indirect-font-lock)
