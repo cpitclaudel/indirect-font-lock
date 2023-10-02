@@ -92,7 +92,8 @@ mode MODE-FN.  If RESET is non-nil, erase existing fontification
 before applying new properties.  Copy fontification and extra
 PROPS."
   (save-match-data
-    (indirect-font-lock-fontify-as mode-fn (match-beginning group) (match-end group) reset props))
+    (indirect-font-lock-fontify-as
+     mode-fn (match-beginning group) (match-end group) reset props))
   '(face nil))
 
 (provide 'indirect-font-lock)
